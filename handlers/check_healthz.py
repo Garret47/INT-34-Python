@@ -13,5 +13,5 @@ async def redirect_healthz(request: aiohttp.web_request.Request):
 
 @aiohttp_jinja2.template('index.html')
 async def get_healthz(request: aiohttp.web_request.Request):
-    loger.debug(f'request method: {request.method}, message: {request.message}')
+    loger.debug(f'request method: {request.method}, path: {request.path}')
     return {'msg': 'OK'}
